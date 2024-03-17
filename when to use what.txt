@@ -1,0 +1,27 @@
+♦♦ WHEN TO USE WHAT 
+
+♦ HEAPS // PRIORITY QUEUE
+
+• when we require to remove/find max/min repeatedly.
+
+♦ BINARY SEARCH 
+
+• when we require an OPTIMAL value, ie OPTIMIZATION
+here we will binary search on the value to optimize,
+
+example : we require to find the minimum possible value for which possible() returns true; consider structure :
+value : 		max solution	...	50	49	48	... 	17	16	15	13	... 	mininum solution
+possible(value):	true 		...	true	true	true	...	true	true	false	false 	...	false
+... the answer we require is value=16, instead of linear search from max solution to min solution just do binary search as search space is sorted, 
+... search space is usually sorted for OPTIMIZATION PROBLEMS.
+
+• it will be required to define the function `possible` by yourself that solves a single instance of the problem.
+
+♦ if the search space has 10⁴ values then tc(possible) can be O(n)
+if the seach space has 10⁹ alues then tc(possible) must be O(logn), O(1), or O(√n)
+
+♦♦ PYTHON SPECIFIC
+
+• tc of pop()≡pop(-1) is O(1) any other like pop(i), i not equal to -1 is O(n).
+• tc of list concatenation : list1 + [1,2,3] is O(n) ... mostly avoid list additions,
+use list1.append(new) instead of list1+=[new]
